@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Netlify CDN Test</title>
+</head>
+
+<body>
+
+<h1>Netlify Proxy Test</h1>
+
+<button onclick="test()">Test Server</button>
+
+<pre id="result"></pre>
+
+<script>
+async function test(){
+
+let r = await fetch("/api/");
+let t = await r.text();
+
+document.getElementById("result").innerText = t;
+
+}
+</script>
+
+</body>
+</html>
